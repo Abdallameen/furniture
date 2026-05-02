@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>شراء الأثاث المستعمل والسكراب | أفضل الأسعار - السعودية</title>
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="نشتري الأثاث المستعمل، الأجهزة الكهربائية، والسكراب (حديد، نحاس، خردة) في السعودية. تقييم عادل، سرعة في الاستجابة، وخدمة جميع الأحياء. اتصل بنا الآن!">
+    <meta name="keywords" content="شراء أثاث مستعمل, شراء سكراب, شراء عفش مستعمل جدة, شراء خردة, شراء الأجهزة الكهربائية المستعملة, شركة شراء اثاث مستعمل السعودية">
+    <meta name="author" content="مؤسسة شراء الأثاث والسكراب">
+    <meta name="robots" content="index, follow">
+    <!-- Google Fonts & RTL Support -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome 6 (free CDN) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Tajawal', sans-serif;
+            background-color: #fefefe;
+            color: #1e2a2e;
+            line-height: 1.5;
+            scroll-behavior: smooth;
+        }
+
+        /* RTL & container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Color scheme: Orange & Black/Charcoal + White (modern) */
+        :root {
+            --primary: #f97316;    /* برتقالي ناري */
+            --primary-dark: #ea580c;
+            --secondary: #1f2937;  /* رمادي غامق/أسود */
+            --secondary-light: #374151;
+            --light-bg: #f9fafb;
+            --white: #ffffff;
+            --gray-border: #e5e7eb;
+            --shadow-sm: 0 10px 25px -5px rgba(0,0,0,0.05), 0 8px 10px -6px rgba(0,0,0,0.02);
+            --shadow-md: 0 20px 25px -12px rgba(0,0,0,0.1);
+            --transition: all 0.3s ease;
+        }
+
+        /* Global */
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        section {
+            padding: 70px 0;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            font-weight: 800;
+            margin-bottom: 2.5rem;
+            text-align: center;
+            position: relative;
+            color: var(--secondary);
+        }
+        .section-title:after {
+            content: "";
+            display: block;
+            width: 70px;
+            height: 4px;
+            background: var(--primary);
+            margin: 12px auto 0;
+            border-radius: 4px;
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-block;
+            background-color: var(--primary);
+            color: white;
+            font-weight: 700;
+            padding: 12px 28px;
+            border-radius: 40px;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+            font-family: 'Tajawal', sans-serif;
+            font-size: 1rem;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+        }
+        .btn:hover {
+            background-color: var(--primary-dark);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, rgba(0,0,0,0.7), rgba(0,0,0,0.5)), url('https://placehold.co/1600x800/2d2d2d/f97316?text=أثاث+وسكراب') center center/cover no-repeat;
+            min-height: 85vh;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: white;
+            background-blend-mode: overlay;
+        }
+        /* استخدام صورة أكثر واقعية عبر unsplash (مجانية) - صورة حقيقية لأثاث مستعمل */
+        .hero {
+            background-image: linear-gradient(95deg, rgba(0,0,0,0.75), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1583686491246-7b11352f77b7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80');
+            background-size: cover;
+            background-position: center 35%;
+        }
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .hero h1 {
+            font-size: 2.8rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            line-height: 1.3;
+        }
+        .hero p {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 1.9rem; }
+            .hero p { font-size: 1rem; }
+            section { padding: 50px 0; }
+        }
+
+        /* About & Cards */
+        .about-text {
+            font-size: 1.18rem;
+            line-height: 1.7;
+            text-align: center;
+            max-width: 850px;
+            margin: 0 auto;
+            background: var(--light-bg);
+            padding: 30px;
+            border-radius: 28px;
+            box-shadow: var(--shadow-sm);
+        }
+
+        /* Services Grid */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 20px;
+        }
+        .service-card {
+            background: var(--white);
+            padding: 30px 20px;
+            text-align: center;
+            border-radius: 24px;
+            transition: var(--transition);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.03);
+            border: 1px solid var(--gray-border);
+        }
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-md);
+            border-color: var(--primary);
+        }
+        .service-card i {
+            font-size: 2.8rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+        .service-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+        .service-card p {
+            color: #4b5563;
+        }
+
+        /* Gallery Grid */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 20px;
+        }
+        .gallery-item {
+            overflow: hidden;
+            border-radius: 20px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+            transition: all 0.4s;
+            aspect-ratio: 4/3;
+        }
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        .gallery-item:hover img {
+            transform: scale(1.08);
+        }
+        .gallery-item:hover {
+            box-shadow: 0 20px 30px -12px rgba(0,0,0,0.2);
+        }
+
+        /* Why choose us */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 30px;
+            text-align: center;
+        }
+        .feature {
+            background: var(--white);
+            padding: 30px 15px;
+            border-radius: 20px;
+            transition: var(--transition);
+            border-bottom: 3px solid transparent;
+        }
+        .feature:hover {
+            border-bottom-color: var(--primary);
+            transform: translateY(-5px);
+        }
+        .feature i {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+        .feature h4 {
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        /* Contact Section */
+        .contact-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            background: var(--light-bg);
+            padding: 40px;
+            border-radius: 32px;
+        }
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+            background: white;
+            padding: 18px 22px;
+            border-radius: 60px;
+            box-shadow: var(--shadow-sm);
+        }
+        .contact-item i {
+            font-size: 2rem;
+            color: var(--primary);
+        }
+        .contact-item a {
+            font-weight: 500;
+            font-size: 1.2rem;
+            direction: ltr;
+            display: inline-block;
+        }
+        .contact-form {
+            background: white;
+            padding: 30px;
+            border-radius: 28px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 14px 20px;
+            border: 1px solid var(--gray-border);
+            border-radius: 50px;
+            font-family: 'Tajawal', sans-serif;
+            font-size: 1rem;
+            transition: 0.2s;
+        }
+        textarea {
+            border-radius: 24px;
+            resize: vertical;
+        }
+        input:focus, textarea:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(249,115,22,0.2);
+        }
+        .btn-submit {
+            width: 100%;
+            background: var(--secondary);
+            border-radius: 50px;
+        }
+        .btn-submit:hover {
+            background: var(--primary);
+        }
+        @media (max-width: 780px) {
+            .contact-wrapper { grid-template-columns: 1fr; }
+            .contact-item a { font-size: 1rem; }
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--secondary);
+            color: #ccc;
+            text-align: center;
+            padding: 30px 0;
+            margin-top: 20px;
+        }
+
+        /* Floating Buttons (Call & WhatsApp) */
+        .float-buttons {
+            position: fixed;
+            bottom: 30px;
+            left: 25px;
+            right: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            z-index: 999;
+        }
+        .float-btn {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            color: white;
+            box-shadow: 0 8px 18px rgba(0,0,0,0.2);
+            transition: 0.2s;
+            animation: pulse-animation 1.8s infinite;
+            cursor: pointer;
+        }
+        .float-btn.call {
+            background-color: #25D366; /* واتساب أخضر */
+        }
+        .float-btn.whatsapp {
+            background-color: #075E54;
+        }
+        /* تعديل الألوان حسب العلامة التجارية: واتساب أخضر، الاتصال برتقالي */
+        .float-btn.call {
+            background-color: var(--primary);
+        }
+        .float-btn.whatsapp {
+            background-color: #25D366;
+        }
+        @keyframes pulse-animation {
+            0% { box-shadow: 0 0 0 0 rgba(249,115,22,0.5); }
+            70% { box-shadow: 0 0 0 12px rgba(249,115,22,0); }
+            100% { box-shadow: 0 0 0 0 rgba(249,115,22,0); }
+        }
+        .float-btn.whatsapp {
+            animation: pulse-green 1.8s infinite;
+        }
+        @keyframes pulse-green {
+            0% { box-shadow: 0 0 0 0 rgba(37,211,102,0.5); }
+            70% { box-shadow: 0 0 0 12px rgba(37,211,102,0); }
+            100% { box-shadow: 0 0 0 0 rgba(37,211,102,0); }
+        }
+        .float-btn:hover {
+            transform: scale(1.1);
+            animation: none;
+        }
+        /* RTL adjustment for floating buttons */
+        @media (max-width: 550px) {
+            .float-btn { width: 50px; height: 50px; font-size: 24px; }
+            .float-buttons { bottom: 20px; left: 20px; gap: 12px; }
+        }
+
+        /* Simple AOS effect (Scroll fadeUp) */
+        .fade-up {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+        .fade-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+
+<!-- Hero Section -->
+<section class="hero" id="home">
+    <div class="container hero-content">
+        <h1>نشتري الأثاث المستعمل والسكراب بأفضل الأسعار</h1>
+        <p>نصل إليك بسرعة – تقييم عادل – خدمة جميع الأحياء في السعودية</p>
+        <a href="#contact" class="btn">تواصل معنا الآن</a>
+    </div>
+</section>
+
+<!-- About Section -->
+<section id="about">
+    <div class="container">
+        <h2 class="section-title">من نحن</h2>
+        <div class="about-text fade-up">
+            نحن في <strong>مؤسسة شراء الأثاث والسكراب</strong> نقدم أفضل خدمة شراء الأثاث المستعمل، الأجهزة الكهربائية، والسكراب (حديد، نحاس، ألمنيوم، خردة) في مختلف مدن المملكة. 
+            نتميز بالسرعة في الاستجابة، التقييم العادل، والمعاينة المجانية الفورية. ثقتكم هدفنا، وخدمتكم مسؤوليتنا. 
+            اتصل بنا اليوم لتحصل على أفضل سعر ونقل سريع دون عناء.
+        </div>
+    </div>
+</section>
+
+<!-- Services Section -->
+<section id="services" style="background: #fefaf7;">
+    <div class="container">
+        <h2 class="section-title">خدماتنا</h2>
+        <div class="services-grid">
+            <div class="service-card fade-up">
+                <i class="fas fa-couch"></i>
+                <h3>شراء الأثاث المستعمل</h3>
+                <p>غرف نوم، مجالس، مطابخ، تحف، وكل ما يخص الأثاث المنزلي والمكتبي.</p>
+            </div>
+            <div class="service-card fade-up">
+                <i class="fas fa-microchip"></i>
+                <h3>شراء الأجهزة الكهربائية</h3>
+                <p>ثلاجات، غسالات، مكيفات، أفران، شاشات – جميع الأنظمة والأحجام.</p>
+            </div>
+            <div class="service-card fade-up">
+                <i class="fas fa-recycle"></i>
+                <h3>شراء السكراب (حديد، نحاس، خردة)</h3>
+                <p>خردة معادن، نحاس، ألمنيوم، حديد، بلاستيك، ونفايات صناعية بأسعار تنافسية.</p>
+            </div>
+            <div class="service-card fade-up">
+                <i class="fas fa-truck-fast"></i>
+                <h3>معاينة مجانية ونقل سريع</h3>
+                <p>فريقنا يصل إليك في نفس اليوم، معاينة بدون أي التزام، ونضمن نقل آمن وسريع.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Gallery Section -->
+<section id="gallery">
+    <div class="container">
+        <h2 class="section-title">معرض الصور</h2>
+        <div class="gallery-grid">
+            <div class="gallery-item fade-up"><img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=500&h=400&fit=crop" alt="أثاث مستعمل فاخر"></div>
+            <div class="gallery-item fade-up"><img src="https://images.unsplash.com/photo-1616486338812-3bdbc5bf62fb?w=500&h=400&fit=crop" alt="أجهزة كهربائية للبيع"></div>
+            <div class="gallery-item fade-up"><img src="https://images.unsplash.com/photo-1533090167189-4fd1f36e0a2c?w=500&h=400&fit=crop" alt="سكراب حديد ونحاس"></div>
+            <div class="gallery-item fade-up"><img src="https://images.unsplash.com/photo-1581417478179-e70a1f0be6b6?w=500&h=400&fit=crop" alt="خردة معادن"></div>
+            <div class="gallery-item fade-up"><img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=500&h=400&fit=crop" alt="نقل الأثاث"></div>
+            <div class="gallery-item fade-up"><img src="https://images.unsplash.com/photo-1595428774223-ef5262f7f35e?w=500&h=400&fit=crop" alt="تقييم عادل وسكراب"></div>
+        </div>
+    </div>
+</section>
+
+<!-- Why Us Section -->
+<section id="why-us" style="background: var(--light-bg);">
+    <div class="container">
+        <h2 class="section-title">لماذا نحن؟</h2>
+        <div class="features-grid">
+            <div class="feature fade-up"><i class="fas fa-bolt"></i><h4>سرعة في الرد</h4><p>نصل إليك خلال أقل من ساعة بعد الاتصال.</p></div>
+            <div class="feature fade-up"><i class="fas fa-tag"></i><h4>أفضل سعر</h4><p>نقدم أعلى الأسعار بالسوق بناءً على تقييم عادل.</p></div>
+            <div class="feature fade-up"><i class="fas fa-handshake"></i><h4>ثقة ومصداقية</h4><p>خبرة سنوات، آلاف العملاء satisfied.</p></div>
+            <div class="feature fade-up"><i class="fas fa-city"></i><h4>نغطي جميع مناطق المدينة</h4><p>الرياض، جدة، مكة، الدمام، وجميع أحياء المملكة.</p></div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact">
+    <div class="container">
+        <h2 class="section-title">تواصل معنا</h2>
+        <div class="contact-wrapper">
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fas fa-phone-alt"></i>
+                    <div><strong>اتصل بنا:</strong><br><a href="tel:+966512345678">+966 51 234 5678</a></div>
+                </div>
+                <div class="contact-item">
+                    <i class="fab fa-whatsapp"></i>
+                    <div><strong>واتساب:</strong><br><a href="https://wa.me/966512345678" target="_blank" id="whatsapp-link">+966 51 234 5678 (إضغط للدردشة)</a></div>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div><strong>تغطية شاملة:</strong><br>خدماتنا تشمل جميع مدن السعودية</div>
+                </div>
+            </div>
+            <div class="contact-form">
+                <h3 style="margin-bottom: 20px;">أرسل لنا طلبك</h3>
+                <form id="contactForm">
+                    <div class="form-group"><input type="text" placeholder="الاسم كاملاً" id="name" required></div>
+                    <div class="form-group"><input type="tel" placeholder="رقم الجوال" id="mobile" required></div>
+                    <div class="form-group"><textarea rows="3" placeholder="الرسالة (نوع الأثاث أو السكراب، العنوان...)" id="message" required></textarea></div>
+                    <button type="submit" class="btn btn-submit">إرسال الطلب</button>
+                </form>
+                <p style="margin-top: 16px; font-size: 0.85rem; color: gray;">سيتم التواصل معك فور استلام طلبك</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="container">
+        <p>© 2025 مؤسسة شراء الأثاث المستعمل والسكراب - جميع الحقوق محفوظة | شراء أثاث مستعمل | شراء سكراب | أفضل الأسعار في السعودية</p>
+    </div>
+</footer>
+
+<!-- Floating Action Buttons -->
+<div class="float-buttons">
+    <a href="tel:+966512345678" class="float-btn call" title="اتصل بنا الآن"><i class="fas fa-phone-alt"></i></a>
+    <a href="https://wa.me/966512345678?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D9%84%D8%AF%D9%8A%20%D8%A3%D8%AB%D8%A7%D8%AB%2F%D8%B3%D9%83%D8%B1%D8%A7%D8%A8%20%D9%84%D9%84%D8%A8%D9%8A%D8%B9" target="_blank" class="float-btn whatsapp" title="راسلنا عبر واتساب"><i class="fab fa-whatsapp"></i></a>
+</div>
+
+<script>
+    // Intersection Observer for scroll fade-up animations
+    const fadeElements = document.querySelectorAll('.fade-up');
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if(entry.isIntersecting){
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.1, rootMargin: "0px 0px -20px 0px" });
+    fadeElements.forEach(el => observer.observe(el));
+
+    // manually trigger for gallery / any already visible
+    window.addEventListener('load', () => {
+        fadeElements.forEach(el => {
+            const rect = el.getBoundingClientRect();
+            if(rect.top < window.innerHeight - 100) el.classList.add('visible');
+        });
+    });
+
+    // Simple Form handling (alert simulation + could store, but just demo)
+    const form = document.getElementById('contactForm');
+    if(form) {
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const name = document.getElementById('name').value.trim();
+            const mobile = document.getElementById('mobile').value.trim();
+            const message = document.getElementById('message').value.trim();
+            if(!name || !mobile || !message) {
+                alert("الرجاء تعبئة جميع الحقول (الاسم، رقم الجوال، الرسالة).");
+                return;
+            }
+            // simulated submission
+            alert(`شكراً ${name}، تم استلام طلبك بنجاح. سيتواصل معك فريقنا خلال دقائق لتقييم الأثاث/السكراب.`);
+            form.reset();
+        });
+    }
+
+    // WhatsApp floating button message already has pre-filled text: "السلام عليكم، لدي أثاث/سكراب للبيع"
+    // Handled via href encoding. Also to ensure the Arabic message is correct:
+    // The link above: text=السلام%20عليكم%D8%8C%20%D9%84%D8%AF%D9%8A%20%D8%A3%D8%AB%D8%A7%D8%AB%2F%D8%B3%D9%83%D8%B1%D8%A7%D8%A8%20%D9%84%D9%84%D8%A8%D9%8A%D8%B9
+    // That's correct. we can also update dynamically if needed. But static is fine.
+    // Additionally, ensure for direct call link..
+    console.log("RTL ready website for used furniture & scrap");
+</script>
+
+<!-- Additional SEO microdata (optional but beneficial) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "شراء الأثاث المستعمل والسكراب بأفضل الأسعار",
+  "image": "https://images.unsplash.com/photo-1583686491246-7b11352f77b7",
+  "telephone": "+966512345678",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "جدة، الرياض",
+    "addressCountry": "SA"
+  },
+  "priceRange": "$$",
+  "description": "نشتري الأثاث المستعمل، الأجهزة الكهربائية، والسكراب (حديد، نحاس، خردة) في السعودية. تقييم عادل وسرعة بالاستجابة.",
+  "areaServed": "SA",
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+966512345678",
+    "contactType": "customer service"
+  }
+}
+</script>
+</body>
+</html>
