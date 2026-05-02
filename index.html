@@ -548,17 +548,15 @@
     const form = document.getElementById('contactForm');
     if(form) {
         form.addEventListener('submit', (e) => {
-            e.preventDefault();
-            const name = document.getElementById('name').value.trim();
-            const mobile = document.getElementById('mobile').value.trim();
-            const message = document.getElementById('message').value.trim();
-            if(!name || !mobile || !message) {
-                alert("الرجاء تعبئة جميع الحقول (الاسم، رقم الجوال، الرسالة).");
-                return;
-            }
-            // simulated submission
-            alert(`شكراً ${name}، تم استلام طلبك بنجاح. سيتواصل معك فريقنا خلال دقائق لتقييم الأثاث/السكراب.`);
-            form.reset();
+          e.preventDefault();
+          const name = document.getElementById('name').value;
+          const mobile = document.getElementById('mobile').value;
+          const message = document.getElementById('message').value;
+
+    // رابط الواتساب مع البيانات
+          const whatsappUrl = `https://wa.me/966562033882?text=طلب جديد من الموقع:%0Aالاسم: ${name}%0Aالجوال: ${mobile}%0Aالطلب: ${message}`;
+    
+          window.open(whatsappUrl, '_blank');
         });
     }
 
