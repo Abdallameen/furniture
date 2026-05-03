@@ -4,16 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>شراء الأثاث المستعمل والسكراب | أفضل الأسعار - مكة 0562033882</title>
-    <!-- SEO Meta Tags -->
     <meta name="description" content="نشتري الأثاث المستعمل، الأجهزة الكهربائية، والسكراب (حديد، نحاس، خردة) في مكة. تقييم عادل، سرعة في الاستجابة، وخدمة جميع الأحياء. اتصل بنا الآن!">
-    <meta name="keywords" content="شراء أثاث مستعمل مكة, شراء سكراب مكة, شراء عفش مستعمل مكة, شراء خردة مكة, شراء الأجهزة الكهربائية المستعملة مكة, شركة شراء اثاث مستعمل مكة, بشراء حديد نحاس مكة, شراء خردة كيبل مكة, مكد">
-    <meta name="author" content="  شراء الأثاث والسكراب المستعمل مكة">
+    <meta name="keywords" content="شراء أثاث مستعمل مكة, شراء سكراب مكة, شراء عفش مستعمل مكة, شراء خردة مكة, شراء الأجهزة الكهربائية المستعملة مكة">
+    <meta name="author" content="شراء الأثاث والسكراب المستعمل مكة">
     <meta name="robots" content="index, follow">
-    <!-- Google Fonts & RTL Support -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
-    <!-- Font Awesome 6 (free CDN) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         * {
@@ -21,7 +18,6 @@
             padding: 0;
             box-sizing: border-box;
         }
-
         body {
             font-family: 'Tajawal', sans-serif;
             background-color: #fefefe;
@@ -29,19 +25,15 @@
             line-height: 1.5;
             scroll-behavior: smooth;
         }
-
-        /* RTL & container */
         .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 24px;
         }
-
-        /* Color scheme: Orange & Black/Charcoal + White (modern) */
         :root {
-            --primary: #f97316;    /* برتقالي ناري */
+            --primary: #f97316;
             --primary-dark: #ea580c;
-            --secondary: #1f2937;  /* رمادي غامق/أسود */
+            --secondary: #1f2937;
             --secondary-light: #374151;
             --light-bg: #f9fafb;
             --white: #ffffff;
@@ -50,23 +42,18 @@
             --shadow-md: 0 20px 25px -12px rgba(0,0,0,0.1);
             --transition: all 0.3s ease;
         }
-
-        /* Global */
         a {
             text-decoration: none;
             color: inherit;
         }
-
         img {
             max-width: 100%;
             height: auto;
             display: block;
         }
-
         section {
             padding: 70px 0;
         }
-
         .section-title {
             font-size: 2rem;
             font-weight: 800;
@@ -84,8 +71,6 @@
             margin: 12px auto 0;
             border-radius: 4px;
         }
-
-        /* Buttons */
         .btn {
             display: inline-block;
             background-color: var(--primary);
@@ -105,14 +90,189 @@
             transform: translateY(-3px);
             box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
         }
-
-        /* Hero Section */
-       
+        /* ====================== */
+        /* 1. شريط أخبار عائم متحرك مع زر إغلاق */
+        /* ====================== */
+        .news-ticker {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: white;
+            padding: 12px 20px;
+            z-index: 1002;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.2);
+            transition: transform 0.4s ease;
+        }
+        .news-ticker.hidden {
+            transform: translateY(-100%);
+        }
+        .ticker-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        .ticker-content {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            overflow: hidden;
+        }
+        .ticker-label {
+            background-color: rgba(255,255,255,0.25);
+            padding: 5px 12px;
+            border-radius: 30px;
+            font-weight: 800;
+            font-size: 0.85rem;
+            white-space: nowrap;
+        }
+        .ticker-scroll {
+            flex: 1;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+        .ticker-text {
+            display: inline-block;
+            animation: tickerMove 18s linear infinite;
+            font-size: 1rem;
+            font-weight: 500;
+        }
+        .ticker-text i {
+            margin: 0 10px;
+            color: #ffd966;
+        }
+        @keyframes tickerMove {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+        }
+        .ticker-btn {
+            background-color: white;
+            color: var(--primary);
+            padding: 6px 18px;
+            border-radius: 40px;
+            font-weight: 700;
+            font-size: 0.85rem;
+            transition: var(--transition);
+            white-space: nowrap;
+        }
+        .ticker-btn:hover {
+            background-color: var(--secondary);
+            color: white;
+        }
+        .close-ticker {
+            background: rgba(0,0,0,0.3);
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: var(--transition);
+            font-size: 1rem;
+        }
+        .close-ticker:hover {
+            background: rgba(0,0,0,0.6);
+            transform: scale(1.1);
+        }
+        @media (max-width: 650px) {
+            .ticker-text { font-size: 0.8rem; }
+            .ticker-label { font-size: 0.7rem; }
+            .ticker-btn { padding: 4px 12px; font-size: 0.7rem; }
+        }
+        /* شريط التنقل مع تعديل المسافة العلوية بسبب الشريط */
+        .navbar {
+            background-color: var(--secondary);
+            position: sticky;
+            top: 0;
+            z-index: 1001;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        body.has-ticker .navbar {
+            top: 54px;
+        }
+        @media (max-width: 650px) {
+            body.has-ticker .navbar {
+                top: 58px;
+            }
+        }
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 24px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .logo {
+            color: var(--primary);
+            font-size: 1.5rem;
+            font-weight: 800;
+        }
+        .logo span {
+            color: white;
+        }
+        .nav-links {
+            display: flex;
+            gap: 25px;
+            list-style: none;
+        }
+        .nav-links a {
+            color: white;
+            font-weight: 500;
+            transition: var(--transition);
+            padding: 8px 0;
+            border-bottom: 2px solid transparent;
+        }
+        .nav-links a:hover {
+            color: var(--primary);
+            border-bottom-color: var(--primary);
+        }
+        .menu-toggle {
+            display: none;
+            font-size: 1.8rem;
+            color: white;
+            cursor: pointer;
+        }
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: block;
+            }
+            .nav-links {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 70%;
+                height: 100vh;
+                background-color: var(--secondary);
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 30px;
+                transition: 0.3s;
+                z-index: 1002;
+                box-shadow: -5px 0 15px rgba(0,0,0,0.2);
+            }
+            .nav-links.active {
+                right: 0;
+            }
+            .close-menu {
+                position: absolute;
+                top: 20px;
+                left: 20px;
+                font-size: 1.8rem;
+                color: white;
+                cursor: pointer;
+            }
+        }
         .hero {
-            /* ده السطر السحري: هيحط طبقة سوداء شفافة فوق صورتك عشان الكلام الأبيض يبان */
             background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7)), url('img/main.png');
-            background-size: cover; /* عشان الصورة تملأ المكان كله */
-            background-position: center; /* عشان الصورة تكون في السنتر */
+            background-size: cover;
+            background-position: center;
             min-height: 85vh;
             display: flex;
             align-items: center;
@@ -140,8 +300,6 @@
             .hero p { font-size: 1rem; }
             section { padding: 50px 0; }
         }
-
-        /* About & Cards */
         .about-text {
             font-size: 1.18rem;
             line-height: 1.7;
@@ -153,8 +311,6 @@
             border-radius: 28px;
             box-shadow: var(--shadow-sm);
         }
-
-        /* Services Grid */
         .services-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -185,11 +341,6 @@
             margin-bottom: 10px;
             font-weight: 700;
         }
-        .service-card p {
-            color: #4b5563;
-        }
-
-        /* Gallery Grid */
         .gallery-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -211,11 +362,6 @@
         .gallery-item:hover img {
             transform: scale(1.08);
         }
-        .gallery-item:hover {
-            box-shadow: 0 20px 30px -12px rgba(0,0,0,0.2);
-        }
-
-        /* Why choose us */
         .features-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -243,8 +389,58 @@
             font-weight: 700;
             margin-bottom: 8px;
         }
-
-        /* Contact Section */
+        /* معرض المقالات المصغرة (مع رابط لصفحة المقالات) */
+        .blog-preview {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 20px;
+        }
+        .blog-preview-card {
+            background: white;
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+            border: 1px solid var(--gray-border);
+            cursor: pointer;
+        }
+        .blog-preview-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-md);
+        }
+        .blog-preview-image {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+        .blog-preview-content {
+            padding: 20px;
+        }
+        .blog-preview-title {
+            font-size: 1.25rem;
+            font-weight: 800;
+            margin-bottom: 10px;
+            color: var(--secondary);
+        }
+        .blog-preview-excerpt {
+            color: #4b5563;
+            line-height: 1.5;
+            margin-bottom: 10px;
+            font-size: 0.9rem;
+        }
+        .read-more {
+            color: var(--primary);
+            font-weight: 700;
+            font-size: 0.85rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+        }
+        .all-articles-btn {
+            text-align: center;
+            margin-top: 40px;
+        }
         .contact-wrapper {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -275,7 +471,6 @@
             font-weight: 500;
             font-size: 1.2rem;
             direction: ltr;
-            display: inline-block;
         }
         .contact-form {
             background: white;
@@ -292,7 +487,6 @@
             border-radius: 50px;
             font-family: 'Tajawal', sans-serif;
             font-size: 1rem;
-            transition: 0.2s;
         }
         textarea {
             border-radius: 24px;
@@ -315,8 +509,6 @@
             .contact-wrapper { grid-template-columns: 1fr; }
             .contact-item a { font-size: 1rem; }
         }
-
-        /* Footer */
         .footer {
             background: var(--secondary);
             color: #ccc;
@@ -324,13 +516,10 @@
             padding: 30px 0;
             margin-top: 20px;
         }
-
-        /* Floating Buttons (Call & WhatsApp) */
         .float-buttons {
             position: fixed;
             bottom: 30px;
             left: 25px;
-            right: auto;
             display: flex;
             flex-direction: column;
             gap: 16px;
@@ -348,15 +537,7 @@
             box-shadow: 0 8px 18px rgba(0,0,0,0.2);
             transition: 0.2s;
             animation: pulse-animation 1.8s infinite;
-            cursor: pointer;
         }
-        .float-btn.call {
-            background-color: #25D366; /* واتساب أخضر */
-        }
-        .float-btn.whatsapp {
-            background-color: #075E54;
-        }
-        /* تعديل الألوان حسب العلامة التجارية: واتساب أخضر، الاتصال برتقالي */
         .float-btn.call {
             background-color: var(--primary);
         }
@@ -380,13 +561,10 @@
             transform: scale(1.1);
             animation: none;
         }
-        /* RTL adjustment for floating buttons */
         @media (max-width: 550px) {
             .float-btn { width: 50px; height: 50px; font-size: 24px; }
             .float-buttons { bottom: 20px; left: 20px; gap: 12px; }
         }
-
-        /* Simple AOS effect (Scroll fadeUp) */
         .fade-up {
             opacity: 0;
             transform: translateY(30px);
@@ -399,17 +577,55 @@
     </style>
 </head>
 <body>
+<!-- شريط أخبار عائم متحرك مع زر إغلاق -->
+<div class="news-ticker" id="newsTicker">
+    <div class="ticker-container">
+        <div class="ticker-content">
+            <span class="ticker-label"><i class="fas fa-bullhorn"></i> آخر العروض</span>
+            <div class="ticker-scroll">
+                <div class="ticker-text">
+                    <i class="fas fa-tag"></i> خصم خاص 10% على أثاث المكاتب حتى نهاية الشهر 
+                    <i class="fas fa-circle" style="font-size: 6px; vertical-align: middle;"></i>
+                    أفضل أسعار شراء النحاس والحدديد في مكة 
+                    <i class="fas fa-circle" style="font-size: 6px; vertical-align: middle;"></i>
+                    خدمة سريعة لجميع الأحياء - اتصل الآن واحصل على عرض سعر فوري
+                </div>
+            </div>
+            <a href="#contact" class="ticker-btn">اطلب عرض سعر <i class="fas fa-arrow-left"></i></a>
+        </div>
+        <div class="close-ticker" id="closeTickerBtn">
+            <i class="fas fa-times"></i>
+        </div>
+    </div>
+</div>
 
-<!-- Hero Section -->
+<nav class="navbar" id="navbar">
+    <div class="nav-container">
+        <div class="logo">شراء<span> الأثاث</span></div>
+        <div class="menu-toggle" id="menuToggle">
+            <i class="fas fa-bars"></i>
+        </div>
+        <ul class="nav-links" id="navLinks">
+            <li class="close-menu" id="closeMenu"><i class="fas fa-times"></i></li>
+            <li><a href="#home">الرئيسية</a></li>
+            <li><a href="#about">من نحن</a></li>
+            <li><a href="#services">خدماتنا</a></li>
+            <li><a href="#gallery">المعرض</a></li>
+            <li><a href="#why-us">لماذا نحن</a></li>
+            <li><a href="articles.html">المقالات</a></li>
+            <li><a href="#contact">اتصل بنا</a></li>
+        </ul>
+    </div>
+</nav>
+
 <section class="hero" id="home">
     <div class="container hero-content">
-        <h1> شراء الأثاث المستعمل والسكراب بأفضل الأسعار مكة جميع الأحياء</h1>
+        <h1>شراء الأثاث المستعمل والسكراب بأفضل الأسعار مكة جميع الأحياء</h1>
         <p>نصل إليك بسرعة – تقييم عادل – خدمة جميع الأحياء في مكة المكرمة</p>
         <a href="#contact" class="btn">تواصل معنا الآن</a>
     </div>
 </section>
 
-<!-- About Section -->
 <section id="about">
     <div class="container">
         <h2 class="section-title">من نحن</h2>
@@ -421,7 +637,6 @@
     </div>
 </section>
 
-<!-- Services Section -->
 <section id="services" style="background: #fefaf7;">
     <div class="container">
         <h2 class="section-title">خدماتنا</h2>
@@ -450,35 +665,68 @@
     </div>
 </section>
 
-<!-- Gallery Section -->
 <section id="gallery">
     <div class="container">
         <h2 class="section-title">معرض الصور</h2>
         <div class="gallery-grid">
-            <div class="gallery-item fade-up"><img src="img/ac.jpg" alt="أثاث مستعمل مكيف مكيفات مكة" style="width: 100%; height: auto; object-fit: cover;"></div>
-            <div class="gallery-item fade-up"><img src="img/buy.jpg" alt="أجهزة كهربائية مستعملة خردة" style="width: 100%; height: auto; object-fit: cover;"></div>
-            <div class="gallery-item fade-up"><img src="img/kich.jpg" alt="سكراب حديد ونحاس" style="width: 100%; height: auto; object-fit: cover;"></div>
-            <div class="gallery-item fade-up"><img src="img/kitchen.jpg" alt="خردة معادن" style="width: 100%; height: auto; object-fit: cover;"></div>
-            <div class="gallery-item fade-up"><img src="img/used.jpg" alt="مطابخ وكل مستعمل أثاث مكة" style="width: 100%; height: auto; object-fit: cover;"></div>
-            <div class="gallery-item fade-up"><img src="img/scrap.png" alt="تقييم عادل وسكراب" style="width: 100%; height: auto; object-fit: cover;"></div>
+            <div class="gallery-item fade-up"><img src="img/ac.jpg" alt="أثاث مستعمل مكيف مكيفات مكة"></div>
+            <div class="gallery-item fade-up"><img src="img/buy.jpg" alt="أجهزة كهربائية مستعملة خردة"></div>
+            <div class="gallery-item fade-up"><img src="img/kich.jpg" alt="سكراب حديد ونحاس"></div>
+            <div class="gallery-item fade-up"><img src="img/kitchen.jpg" alt="خردة معادن"></div>
+            <div class="gallery-item fade-up"><img src="img/used.jpg" alt="مطابخ وكل مستعمل أثاث مكة"></div>
+            <div class="gallery-item fade-up"><img src="img/scrap.png" alt="تقييم عادل وسكراب"></div>
         </div>
     </div>
 </section>
 
-<!-- Why Us Section -->
 <section id="why-us" style="background: var(--light-bg);">
     <div class="container">
         <h2 class="section-title">لماذا نحن؟</h2>
         <div class="features-grid">
             <div class="feature fade-up"><i class="fas fa-bolt"></i><h4>سرعة في الرد</h4><p>نصل إليك خلال أقل من ساعة بعد الاتصال.</p></div>
             <div class="feature fade-up"><i class="fas fa-tag"></i><h4>أفضل سعر</h4><p>نقدم أعلى الأسعار بالسوق بناءً على تقييم عادل.</p></div>
-            <div class="feature fade-up"><i class="fas fa-handshake"></i><h4>ثقة ومصداقية</h4><p>خبرة سنوات، آلاف العملاء satisfied.</p></div>
+            <div class="feature fade-up"><i class="fas fa-handshake"></i><h4>ثقة ومصداقية</h4><p>خبرة سنوات، آلاف العملاء راضيين عن خدماتنا/p></div>
             <div class="feature fade-up"><i class="fas fa-city"></i><h4>نغطي جميع مناطق المدينة</h4><p>جميع أحياء مكة المكرمة اتصل نصل</p></div>
         </div>
     </div>
 </section>
 
-<!-- Contact Section -->
+<!-- معرض المقالات المصغرة مع رابط لصفحة مستقلة -->
+<section id="blog-preview" style="background: #fff;">
+    <div class="container">
+        <h2 class="section-title">أحدث المقالات</h2>
+        <div class="blog-preview">
+            <div class="blog-preview-card fade-up" onclick="location.href='article-1.html'">
+                <img src="img/used.jpg" alt="أفضل سعر للأثاث المستعمل" class="blog-preview-image">
+                <div class="blog-preview-content">
+                    <h3 class="blog-preview-title">كيف تحصل على أفضل سعر لأثاثك المستعمل في مكة؟</h3>
+                    <p class="blog-preview-excerpt">نصائح ذهبية لتقييم أثاثك المستعمل قبل البيع، وكيف تتعامل مع شركات الشراء لتحصل على أعلى سعر عادل...</p>
+                    <span class="read-more">اقرأ المزيد <i class="fas fa-arrow-left"></i></span>
+                </div>
+            </div>
+            <div class="blog-preview-card fade-up" onclick="location.href='article-2.html'">
+                <img src="img/scrap.png" alt="أسعار الحديد والنحاس" class="blog-preview-image">
+                <div class="blog-preview-content">
+                    <h3 class="blog-preview-title">أسعار الحديد والنحاس اليوم في سوق الخردة</h3>
+                    <p class="blog-preview-excerpt">تعرف على أحدث أسعار شراء الحديد والنحاس والألمنيوم في مكة، والعوامل المؤثرة في تحديد السعر العادل...</p>
+                    <span class="read-more">اقرأ المزيد <i class="fas fa-arrow-left"></i></span>
+                </div>
+            </div>
+            <div class="blog-preview-card fade-up" onclick="location.href='article-3.html'">
+                <img src="img/ac.jpg" alt="بيع المكيفات المستعملة" class="blog-preview-image">
+                <div class="blog-preview-content">
+                    <h3 class="blog-preview-title">دليلك لبيع المكيفات المستعملة بأفضل سعر</h3>
+                    <p class="blog-preview-excerpt">كيف تفحص مكيفك المستعمل قبل البيع؟ وما هي الماركات التي تطلبها شركات الشراء؟ إجابات ونصائح مهمة...</p>
+                    <span class="read-more">اقرأ المزيد <i class="fas fa-arrow-left"></i></span>
+                </div>
+            </div>
+        </div>
+        <div class="all-articles-btn">
+            <a href="articles.html" class="btn">جميع المقالات <i class="fas fa-arrow-left"></i></a>
+        </div>
+    </div>
+</section>
+
 <section id="contact">
     <div class="container">
         <h2 class="section-title">تواصل معنا</h2>
@@ -490,7 +738,7 @@
                 </div>
                 <div class="contact-item">
                     <i class="fab fa-whatsapp"></i>
-                    <div><strong>واتساب:</strong><br><a href="https://wa.me/966562033882" target="_blank" id="whatsapp-link">+966 56 203 3882 (إضغط للدردشة)</a></div>
+                    <div><strong>واتساب:</strong><br><a href="https://wa.me/966562033882" target="_blank">+966 56 203 3882 (إضغط للدردشة)</a></div>
                 </div>
                 <div class="contact-item">
                     <i class="fas fa-map-marker-alt"></i>
@@ -517,14 +765,13 @@
     </div>
 </footer>
 
-<!-- Floating Action Buttons -->
 <div class="float-buttons">
     <a href="tel:+966562033882" class="float-btn call" title="اتصل بنا الآن"><i class="fas fa-phone-alt"></i></a>
-    <a href="https://wa.me/966562033882?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D9%84%D8%AF%D9%8A%20%D8%A3%D8%AB%D8%A7%D8%AB%2F%D8%B3%D9%83%D8%B1%D8%A7%D8%A8%20%D9%84%D9%84%D8%A8%D9%8A%D8%B9" target="_blank" class="float-btn whatsapp" title="راسلنا عبر واتساب"><i class="fab fa-whatsapp"></i></a>
+    <a href="https://wa.me/966562033882?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D9%84%D8%AF%D9%8A%20%D8%A3%D8%AB%D8%A7%D8%AB%2F%D8%B3%D9%83%D8%B1%D8%A7%D8%A8%20%D9%84%D9%84%D8%A8%D9%8A%D8%B9" target="_blank" class="float-btn whatsapp" title="راسلنا عبر واتساب"><i class="fab fa-whatsapp"></i></button>
 </div>
 
 <script>
-    // Intersection Observer for scroll fade-up animations
+    // fade up observer
     const fadeElements = document.querySelectorAll('.fade-up');
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
@@ -533,18 +780,15 @@
                 observer.unobserve(entry.target);
             }
         });
-    }, { threshold: 0.1, rootMargin: "0px 0px -20px 0px" });
+    }, { threshold: 0.1 });
     fadeElements.forEach(el => observer.observe(el));
-
-    // manually trigger for gallery / any already visible
     window.addEventListener('load', () => {
         fadeElements.forEach(el => {
             const rect = el.getBoundingClientRect();
             if(rect.top < window.innerHeight - 100) el.classList.add('visible');
         });
     });
-
-    // Simple Form handling (alert simulation + could store, but just demo)
+    // Contact form
     const form = document.getElementById('contactForm');
     if(form) {
         form.addEventListener('submit', (e) => {
@@ -552,44 +796,45 @@
           const name = document.getElementById('name').value;
           const mobile = document.getElementById('mobile').value;
           const message = document.getElementById('message').value;
-
-    // رابط الواتساب مع البيانات
           const whatsappUrl = `https://wa.me/966562033882?text=طلب جديد من الموقع:%0Aالاسم: ${name}%0Aالجوال: ${mobile}%0Aالطلب: ${message}`;
-    
           window.open(whatsappUrl, '_blank');
         });
     }
-
-    // WhatsApp floating button message already has pre-filled text: "السلام عليكم، لدي أثاث/سكراب للبيع"
-    // Handled via href encoding. Also to ensure the Arabic message is correct:
-    // The link above: text=السلام%20عليكم%D8%8C%20%D9%84%D8%AF%D9%8A%20%D8%A3%D8%AB%D8%A7%D8%AB%2F%D8%B3%D9%83%D8%B1%D8%A7%D8%A8%20%D9%84%D9%84%D8%A8%D9%8A%D8%B9
-    // That's correct. we can also update dynamically if needed. But static is fine.
-    // Additionally, ensure for direct call link..
-    console.log("RTL ready website for used furniture & scrap");
-</script>
-
-<!-- Additional SEO microdata (optional but beneficial) -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "name": " شراء الأثاث المستعمل والسكراب بأفضل الأسعار مكة المكرمة",
-  "image": "/img/main.png",
-  "telephone": "+966562033882",
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "مكة، مكة المكرمة",
-    "addressCountry": "SA"
-  },
-  "priceRange": "$$",
-  "description": "نشتري الأثاث المستعمل، الأجهزة الكهربائية، والسكراب (حديد، نحاس، خردة) في مكة. تقييم عادل وسرعة بالاستجابة.",
-  "areaServed": "SA",
-  "contactPoint": {
-    "@type": "ContactPoint",
-    "telephone": "+966562033882",
-    "contactType": "customer service"
-  }
-}
+    // Mobile menu
+    const menuToggle = document.getElementById('menuToggle');
+    const navLinks = document.getElementById('navLinks');
+    const closeMenu = document.getElementById('closeMenu');
+    if(menuToggle) {
+        menuToggle.addEventListener('click', () => { navLinks.classList.add('active'); });
+    }
+    if(closeMenu) {
+        closeMenu.addEventListener('click', () => { navLinks.classList.remove('active'); });
+    }
+    document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', () => { navLinks.classList.remove('active'); });
+    });
+    
+    // News Ticker close and store preference + ajust body class for navbar top position
+    const ticker = document.getElementById('newsTicker');
+    const closeBtn = document.getElementById('closeTickerBtn');
+    const navbarEl = document.getElementById('navbar');
+    function checkTickerState() {
+        if(localStorage.getItem('newsTickerClosed') === 'true') {
+            ticker.classList.add('hidden');
+            document.body.classList.remove('has-ticker');
+        } else {
+            ticker.classList.remove('hidden');
+            document.body.classList.add('has-ticker');
+        }
+    }
+    if(closeBtn) {
+        closeBtn.addEventListener('click', () => {
+            ticker.classList.add('hidden');
+            document.body.classList.remove('has-ticker');
+            localStorage.setItem('newsTickerClosed', 'true');
+        });
+    }
+    checkTickerState();
 </script>
 </body>
 </html>
