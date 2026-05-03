@@ -146,7 +146,7 @@
             color: #ffd966;
         }
         @keyframes tickerMove {
-            0% { transform: translateX(100%); }
+            0% { transform: translateX(0); }
             100% { transform: translateX(-100%); }
         }
         .ticker-btn {
@@ -788,6 +788,7 @@
             if(rect.top < window.innerHeight - 100) el.classList.add('visible');
         });
     });
+    
     // Contact form
     const form = document.getElementById('contactForm');
     if(form) {
@@ -800,6 +801,7 @@
           window.open(whatsappUrl, '_blank');
         });
     }
+    
     // Mobile menu
     const menuToggle = document.getElementById('menuToggle');
     const navLinks = document.getElementById('navLinks');
@@ -814,27 +816,20 @@
         link.addEventListener('click', () => { navLinks.classList.remove('active'); });
     });
     
-    // News Ticker close and store preference + ajust body class for navbar top position
+    // شريط الأخبار - يختفي فقط عند الضغط على X (بدون حفظ، يظهر مجدداً عند تحديث الصفحة)
     const ticker = document.getElementById('newsTicker');
-    const closeBtn = document.getElementById('closeTickerBtn');
-    const navbarEl = document.getElementById('navbar');
-    function checkTickerState() {
-        if(localStorage.getItem('newsTickerClosed') === 'true') {
+    const closeTickerBtn = document.getElementById('closeTickerBtn');
+    
+    if(closeTickerBtn) {
+        closeTickerBtn.addEventListener('click', () => {
             ticker.classList.add('hidden');
             document.body.classList.remove('has-ticker');
-        } else {
-            ticker.classList.remove('hidden');
-            document.body.classList.add('has-ticker');
-        }
-    }
-    if(closeBtn) {
-        closeBtn.addEventListener('click', () => {
-            ticker.classList.add('hidden');
-            document.body.classList.remove('has-ticker');
-            localStorage.setItem('newsTickerClosed', 'true');
         });
     }
-    checkTickerState();
+    
+    // الشريط يظهر دائماً عند فتح الصفحة (تم إزالة localStorage)
+    ticker.classList.remove('hidden');
+    document.body.classList.add('has-ticker');
 </script>
 </body>
 </html>
