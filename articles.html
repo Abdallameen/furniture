@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>جميع المقالات - شراء الأثاث المستعمل والسكراب في مكة</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Tajawal', sans-serif; background: #fefefe; color: #1e2a2e; line-height: 1.6; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+        :root {
+            --primary: #f97316;
+            --primary-dark: #ea580c;
+            --secondary: #1f2937;
+            --gray-border: #e5e7eb;
+            --shadow-sm: 0 10px 25px -5px rgba(0,0,0,0.05);
+        }
+        .navbar {
+            background: var(--secondary);
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+        .logo { color: var(--primary); font-size: 1.5rem; font-weight: 800; }
+        .logo span { color: white; }
+        .back-home { color: white; background: var(--primary); padding: 8px 20px; border-radius: 40px; transition: 0.3s; }
+        .back-home:hover { background: var(--primary-dark); transform: translateY(-2px); }
+        .page-title { font-size: 2.2rem; text-align: center; margin: 50px 0 30px; color: var(--secondary); }
+        .articles-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+        .article-card {
+            background: white;
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            transition: 0.3s;
+            border: 1px solid var(--gray-border);
+            cursor: pointer;
+        }
+        .article-card:hover { transform: translateY(-8px); box-shadow: 0 20px 30px -12px rgba(0,0,0,0.15); }
+        .article-image { width: 100%; height: 200px; object-fit: cover; }
+        .article-content { padding: 20px; }
+        .article-title { font-size: 1.35rem; font-weight: 800; margin-bottom: 10px; color: var(--secondary); }
+        .article-excerpt { color: #4b5563; margin-bottom: 15px; }
+        .read-more { color: var(--primary); font-weight: 700; display: inline-flex; align-items: center; gap: 5px; }
+        .footer { background: var(--secondary); color: #ccc; text-align: center; padding: 30px 0; margin-top: 40px; }
+        @media (max-width: 768px) { .page-title { font-size: 1.6rem; } }
+    </style>
+</head>
+<body>
+<nav class="navbar">
+    <div class="nav-container">
+        <div class="logo">شراء<span> الأثاث</span></div>
+        <a href="index.html" class="back-home"><i class="fas fa-home"></i> العودة للرئيسية</a>
+    </div>
+</nav>
+<div class="container">
+    <h1 class="page-title">📚 جميع المقالات</h1>
+    <div class="articles-grid">
+        <div class="article-card" onclick="location.href='article-1.html'">
+            <img src="img/used.jpg" alt="أفضل سعر للأثاث المستعمل" class="article-image">
+            <div class="article-content">
+                <h3 class="article-title">كيف تحصل على أفضل سعر لأثاثك المستعمل في مكة؟</h3>
+                <p class="article-excerpt">نصائح ذهبية لتقييم أثاثك المستعمل قبل البيع، وكيف تتعامل مع شركات الشراء لتحصل على أعلى سعر عادل...</p>
+                <span class="read-more">اقرأ المزيد <i class="fas fa-arrow-left"></i></span>
+            </div>
+        </div>
+        <div class="article-card" onclick="location.href='article-2.html'">
+            <img src="img/scrap.png" alt="أسعار الحديد والنحاس" class="article-image">
+            <div class="article-content">
+                <h3 class="article-title">أسعار الحديد والنحاس اليوم في سوق الخردة</h3>
+                <p class="article-excerpt">تعرف على أحدث أسعار شراء الحديد والنحاس والألمنيوم في مكة، والعوامل المؤثرة في تحديد السعر العادل...</p>
+                <span class="read-more">اقرأ المزيد <i class="fas fa-arrow-left"></i></span>
+            </div>
+        </div>
+        <div class="article-card" onclick="location.href='article-3.html'">
+            <img src="img/ac.jpg" alt="بيع المكيفات المستعملة" class="article-image">
+            <div class="article-content">
+                <h3 class="article-title">دليلك لبيع المكيفات المستعملة بأفضل سعر</h3>
+                <p class="article-excerpt">كيف تفحص مكيفك المستعمل قبل البيع؟ وما هي الماركات التي تطلبها شركات الشراء؟ إجابات ونصائح مهمة...</p>
+                <span class="read-more">اقرأ المزيد <i class="fas fa-arrow-left"></i></span>
+            </div>
+        </div>
+        <div class="article-card" onclick="location.href='article-4.html'">
+            <img src="img/kitchen.jpg" alt="بيع المطبخ المستعمل" class="article-image">
+            <div class="article-content">
+                <h3 class="article-title">نصائح لبيع مطبخك المستعمل بسرعة وسعر مناسب</h3>
+                <p class="article-excerpt">المطابخ المستعملة قد تكون كنزاً إذا عرفت كيف تسوقها. تعرف على الخطوات الصحيحة لبيع مطبخك القديم...</p>
+                <span class="read-more">اقرأ المزيد <i class="fas fa-arrow-left"></i></span>
+            </div>
+        </div>
+        <div class="article-card" onclick="location.href='article-5.html'">
+            <img src="img/buy.jpg" alt="الفرق بين الأثاث والسكراب" class="article-image">
+            <div class="article-content">
+                <h3 class="article-title">الفرق بين شراء الأثاث المستعمل وشراء السكراب</h3>
+                <p class="article-excerpt">تعرف على الفروقات الأساسية بين سوق شراء الأثاث المستعمل وسوق شراء الخردة والمعادن، وأيهما الأنسب لك...</p>
+                <span class="read-more">اقرأ المزيد <i class="fas fa-arrow-left"></i></span>
+            </div>
+        </div>
+        <div class="article-card" onclick="location.href='article-6.html'">
+            <img src="img/kich.jpg" alt="اختيار شركة موثوقة" class="article-image">
+            <div class="article-content">
+                <h3 class="article-title">كيف تختار شركة شراء أثاث مستعمل موثوقة في مكة؟</h3>
+                <p class="article-excerpt">معايير اختيار الشركة المناسبة: السرعة، التقييم العادل، السمعة، والخدمات الإضافية مثل النقل المجاني...</p>
+                <span class="read-more">اقرأ المزيد <i class="fas fa-arrow-left"></i></span>
+            </div>
+        </div>
+    </div>
+</div>
+<footer class="footer">
+    <div class="container">
+        <p>© 2026 شراء الأثاث المستعمل والسكراب - جميع الحقوق محفوظة | مكة المكرمة</p>
+    </div>
+</footer>
+</body>
+</html>
