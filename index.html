@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>شراء جميع أنواع السكراب | خردة، حديد، نحاس، ألمنيوم - مكة | 0562033882</title>
+    <meta name="description" content="نحن المتخصصون في شراء السكراب بكل أنواعه في مكة: حديد، نحاس، ألمنيوم، خردة، بلاستيك، كيابل، سكراب السيارات والمعدات. أفضل الأسعار، معاينة فورية، دفع نقدي. شراء أثاث مستعمل أيضاً. اتصل الآن!">
+    <meta name="keywords" content="شراء السكراب مكة, شراء خردة مكة, شراء حديد مستعمل مكة, شراء نحاس مكة, شراء ألمنيوم مكة, سكراب للبيع مكة, شراء سكراب سيارات, خردة معادن مكة, شراء كيابل نحاس مكة, افضل شركة سكراب مكة, شراء اثاث مستعمل مكة">
+    <meta name="author" content="مؤسسة شراء السكراب والأثاث المستعمل - مكة">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Tajawal', sans-serif;
+            background-color: #fefefe;
+            color: #1e2a2e;
+            line-height: 1.5;
+            scroll-behavior: smooth;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+        :root {
+            --primary: #f97316;
+            --primary-dark: #ea580c;
+            --secondary: #1f2937;
+            --secondary-light: #374151;
+            --light-bg: #f9fafb;
+            --white: #ffffff;
+            --gray-border: #e5e7eb;
+            --shadow-sm: 0 10px 25px -5px rgba(0,0,0,0.05), 0 8px 10px -6px rgba(0,0,0,0.02);
+            --shadow-md: 0 20px 25px -12px rgba(0,0,0,0.1);
+            --transition: all 0.3s ease;
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+        section {
+            padding: 70px 0;
+        }
+        .section-title {
+            font-size: 2rem;
+            font-weight: 800;
+            margin-bottom: 2.5rem;
+            text-align: center;
+            position: relative;
+            color: var(--secondary);
+        }
+        .section-title:after {
+            content: "";
+            display: block;
+            width: 70px;
+            height: 4px;
+            background: var(--primary);
+            margin: 12px auto 0;
+            border-radius: 4px;
+        }
+        .btn {
+            display: inline-block;
+            background-color: var(--primary);
+            color: white;
+            font-weight: 700;
+            padding: 12px 28px;
+            border-radius: 40px;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+            font-family: 'Tajawal', sans-serif;
+            font-size: 1rem;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+        }
+        .btn:hover {
+            background-color: var(--primary-dark);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
+        }
+        /* شريط أخبار سكراب */
+        .news-ticker {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(135deg, #1e2a2e, #0f172a);
+            color: #ffd966;
+            padding: 12px 20px;
+            z-index: 1002;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.3);
+            transition: transform 0.4s ease;
+            border-bottom: 2px solid var(--primary);
+        }
+        .news-ticker.hidden {
+            transform: translateY(-100%);
+        }
+        .ticker-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        .ticker-content {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            overflow: hidden;
+        }
+        .ticker-label {
+            background-color: rgba(249,115,22,0.3);
+            padding: 5px 12px;
+            border-radius: 30px;
+            font-weight: 800;
+            font-size: 0.85rem;
+            white-space: nowrap;
+            color: white;
+        }
+        .ticker-scroll {
+            flex: 1;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+        .ticker-text {
+            display: inline-block;
+            animation: tickerMove 22s linear infinite;
+            font-size: 1rem;
+            font-weight: 600;
+        }
+        .ticker-text i {
+            margin: 0 10px;
+            color: var(--primary);
+        }
+        @keyframes tickerMove {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(100%); }
+        }
+        .ticker-btn {
+            background-color: var(--primary);
+            color: white;
+            padding: 6px 18px;
+            border-radius: 40px;
+            font-weight: 700;
+            font-size: 0.85rem;
+            transition: var(--transition);
+            white-space: nowrap;
+        }
+        .ticker-btn:hover {
+            background-color: white;
+            color: var(--primary);
+        }
+        .close-ticker {
+            background: rgba(0,0,0,0.4);
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: var(--transition);
+            color: white;
+        }
+        .close-ticker:hover {
+            background: rgba(0,0,0,0.8);
+        }
+        @media (max-width: 650px) {
+            .ticker-text { font-size: 0.75rem; }
+            .ticker-label { font-size: 0.7rem; }
+        }
+        .navbar {
+            background-color: var(--secondary);
+            position: sticky;
+            top: 0;
+            z-index: 1001;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        body.has-ticker .navbar {
+            top: 54px;
+        }
+        @media (max-width: 650px) {
+            body.has-ticker .navbar { top: 58px; }
+        }
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 24px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .logo {
+            color: var(--primary);
+            font-size: 1.5rem;
+            font-weight: 800;
+        }
+        .logo span {
+            color: white;
+        }
+        .nav-links {
+            display: flex;
+            gap: 25px;
+            list-style: none;
+        }
+        .nav-links a {
+            color: white;
+            font-weight: 500;
+            transition: var(--transition);
+            padding: 8px 0;
+            border-bottom: 2px solid transparent;
+        }
+        .nav-links a:hover {
+            color: var(--primary);
+            border-bottom-color: var(--primary);
+        }
+        .menu-toggle {
+            display: none;
+            font-size: 1.8rem;
+            color: white;
+            cursor: pointer;
+        }
+        @media (max-width: 768px) {
+            .menu-toggle { display: block; }
+            .nav-links {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 70%;
+                height: 100vh;
+                background-color: var(--secondary);
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 30px;
+                transition: 0.3s;
+                z-index: 1002;
+                box-shadow: -5px 0 15px rgba(0,0,0,0.2);
+            }
+            .nav-links.active { right: 0; }
+            .close-menu {
+                position: absolute;
+                top: 20px;
+                left: 20px;
+                font-size: 1.8rem;
+                color: white;
+                cursor: pointer;
+            }
+        }
+        /* Hero مع تركيز سكراب */
+        .hero {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.7)), url('img/scrap-hero.jpg');
+            background-size: cover;
+            background-position: center;
+            min-height: 85vh;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: white;
+        }
+        /* fallback gradient if image missing */
+        .hero {
+            background-color: #111;
+            background-blend-mode: overlay;
+        }
+        .hero-content {
+            max-width: 850px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .hero h1 {
+            font-size: 2.8rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            line-height: 1.3;
+        }
+        .hero p {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+        .hero strong {
+            color: #ffb347;
+        }
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 1.9rem; }
+            .hero p { font-size: 1rem; }
+            section { padding: 50px 0; }
+        }
+        .scrap-highlight {
+            background: var(--light-bg);
+            border-right: 6px solid var(--primary);
+            padding: 28px;
+            border-radius: 24px;
+        }
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+            gap: 30px;
+            margin-top: 20px;
+        }
+        .service-card {
+            background: var(--white);
+            padding: 30px 20px;
+            text-align: center;
+            border-radius: 24px;
+            transition: var(--transition);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.03);
+            border: 1px solid var(--gray-border);
+        }
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-md);
+            border-color: var(--primary);
+        }
+        .service-card i {
+            font-size: 2.8rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+        .service-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 20px;
+        }
+        .gallery-item {
+            overflow: hidden;
+            border-radius: 20px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+            transition: all 0.4s;
+            aspect-ratio: 4/3;
+        }
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        .gallery-item:hover img {
+            transform: scale(1.08);
+        }
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 30px;
+            text-align: center;
+        }
+        .feature {
+            background: var(--white);
+            padding: 30px 15px;
+            border-radius: 20px;
+            transition: var(--transition);
+            border-bottom: 3px solid transparent;
+        }
+        .feature:hover {
+            border-bottom-color: var(--primary);
+            transform: translateY(-5px);
+        }
+        .feature i {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+        .contact-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            background: var(--light-bg);
+            padding: 40px;
+            border-radius: 32px;
+        }
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+            background: white;
+            padding: 18px 22px;
+            border-radius: 60px;
+            box-shadow: var(--shadow-sm);
+        }
+        .contact-item i {
+            font-size: 2rem;
+            color: var(--primary);
+        }
+        .contact-item a {
+            font-weight: 500;
+            font-size: 1.2rem;
+            direction: ltr;
+        }
+        .contact-form {
+            background: white;
+            padding: 30px;
+            border-radius: 28px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 14px 20px;
+            border: 1px solid var(--gray-border);
+            border-radius: 50px;
+            font-family: 'Tajawal', sans-serif;
+            font-size: 1rem;
+        }
+        textarea {
+            border-radius: 24px;
+            resize: vertical;
+        }
+        input:focus, textarea:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(249,115,22,0.2);
+        }
+        .btn-submit {
+            width: 100%;
+            background: var(--secondary);
+            border-radius: 50px;
+        }
+        .btn-submit:hover {
+            background: var(--primary);
+        }
+        @media (max-width: 780px) {
+            .contact-wrapper { grid-template-columns: 1fr; }
+            .contact-item a { font-size: 1rem; }
+        }
+        .footer {
+            background: var(--secondary);
+            color: #ccc;
+            text-align: center;
+            padding: 30px 0;
+            margin-top: 20px;
+        }
+        .float-buttons {
+            position: fixed;
+            bottom: 30px;
+            left: 25px;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            z-index: 999;
+        }
+        .float-btn {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            color: white;
+            box-shadow: 0 8px 18px rgba(0,0,0,0.2);
+            transition: 0.2s;
+            animation: pulse-animation 1.8s infinite;
+        }
+        .float-btn.call { background-color: var(--primary); }
+        .float-btn.whatsapp { background-color: #25D366; }
+        @keyframes pulse-animation {
+            0% { box-shadow: 0 0 0 0 rgba(249,115,22,0.5); }
+            70% { box-shadow: 0 0 0 12px rgba(249,115,22,0); }
+            100% { box-shadow: 0 0 0 0 rgba(249,115,22,0); }
+        }
+        .float-btn.whatsapp { animation: pulse-green 1.8s infinite; }
+        @keyframes pulse-green {
+            0% { box-shadow: 0 0 0 0 rgba(37,211,102,0.5); }
+            70% { box-shadow: 0 0 0 12px rgba(37,211,102,0); }
+            100% { box-shadow: 0 0 0 0 rgba(37,211,102,0); }
+        }
+        .float-btn:hover { transform: scale(1.1); animation: none; }
+        @media (max-width: 550px) {
+            .float-btn { width: 50px; height: 50px; font-size: 24px; }
+        }
+        .fade-up {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+        .fade-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .scrap-badge {
+            background: #f9731610;
+            padding: 10px 20px;
+            border-radius: 40px;
+            font-weight: bold;
+            display: inline-block;
+            margin-bottom: 20px;
+            border: 1px solid #f9731640;
+        }
+    </style>
+</head>
+<body>
+<!-- شريط أخبار سكراب دائم الحركة -->
+<div class="news-ticker" id="newsTicker">
+    <div class="ticker-container">
+        <div class="ticker-content">
+            <span class="ticker-label"><i class="fas fa-industry"></i> سكراب مكة</span>
+            <div class="ticker-scroll">
+                <div class="ticker-text">
+                    🔩 نشتري جميع أنواع السكراب: حديد، نحاس، ألمنيوم، خردة معادن، كيابل، بلاستيك، سكراب سيارات، ومعدات ثقيلة 🔩 
+                    <i class="fas fa-circle" style="font-size: 6px;"></i> أفضل الأسعار في مكة - معاينة مجانية ودفع فوري 
+                    <i class="fas fa-circle" style="font-size: 6px;"></i> اتصل الآن: 0562033882
+                </div>
+            </div>
+            <a href="#contact" class="ticker-btn">طلب عرض سعر <i class="fas fa-arrow-left"></i></a>
+        </div>
+        <div class="close-ticker" id="closeTickerBtn"><i class="fas fa-times"></i></div>
+    </div>
+</div>
+
+<nav class="navbar" id="navbar">
+    <div class="nav-container">
+        <div class="logo">سكراب<span> مكة</span> | خردة & معادن</div>
+        <div class="menu-toggle" id="menuToggle"><i class="fas fa-bars"></i></div>
+        <ul class="nav-links" id="navLinks">
+            <li class="close-menu" id="closeMenu"><i class="fas fa-times"></i></li>
+            <li><a href="#home">الرئيسية</a></li>
+            <li><a href="#scrap-services">السكراب</a></li>
+            <li><a href="#about">من نحن</a></li>
+            <li><a href="#gallery">المعرض</a></li>
+            <li><a href="#contact">اتصل بنا</a></li>
+        </ul>
+    </div>
+</nav>
+
+<section class="hero" id="home">
+    <div class="container hero-content">
+        <div class="scrap-badge"><i class="fas fa-recycle"></i> شراء جميع أنواع السكراب في مكة المكرمة</div>
+        <h1>الرقم الأول <strong>لشراء السكراب</strong> والحديد والنحاس والألمنيوم والخردة</h1>
+        <p>نقدّم أعلى الأسعار لكل كيلو حديد، نحاس، ألمنيوم، كيابل، سكراب سيارات، خردة معادن، ومخلفات صناعية. خدمة فورية لجميع أحياء مكة.</p>
+        <a href="#contact" class="btn">احصل على عرض سعر فوري</a>
+    </div>
+</section>
+
+<!-- قسم متخصص بالسكراب فقط (مُركّز) -->
+<section id="scrap-services" style="background: #fff;">
+    <div class="container">
+        <h2 class="section-title">جميع أنواع السكراب التي نشتريها في مكة</h2>
+        <div class="services-grid">
+            <div class="service-card fade-up"><i class="fas fa-cogs"></i><h3>سكراب حديد</h3><p>حديد تسليح، هياكل، صاج، خردة حديد ثقيل وخفيف – أعلى سعر للطن</p></div>
+            <div class="service-card fade-up"><i class="fas fa-copper"></i><h3>نحاس بأشكاله</h3><p>نحاس أحمر، أصفر، مواتير، كيابل نحاس، أنابيب – نقدّر الوزن بدقة</p></div>
+            <div class="service-card fade-up"><i class="fas fa-bolt"></i><h3>ألمنيوم وستانلس ستيل</h3><p>شبابيك ألمنيوم، قواطع، استانلس، خردة ألمنيوم مطابخ ومستلزمات</p></div>
+            <div class="service-card fade-up"><i class="fas fa-car"></i><h3>سكراب سيارات ومعدات</h3><p>سيارات تالفة، قطع غيار، بطاريات، إطارات، مكيفات سكراب، مولدات</p></div>
+            <div class="service-card fade-up"><i class="fas fa-plug"></i><h3>كيابل وأسلاك كهربائية</h3><p>كابلات نحاس وألمنيوم، أسلاك كهرباء، كيابل ضغط عالي بجميع المقاسات</p></div>
+            <div class="service-card fade-up"><i class="fas fa-drumstick-bite"></i><h3>خردة بلاستيك ومعادن متنوعة</h3><p>بي في سي، بولي إيثيلين، معادن غير حديدية، زنك، رصاص، ونحاس</p></div>
+        </div>
+    </div>
+</section>
+
+<section id="about">
+    <div class="container">
+        <h2 class="section-title">خبراء شراء السكراب في مكة منذ أعوام</h2>
+        <div class="about-text fade-up scrap-highlight">
+            <i class="fas fa-thumbs-up" style="font-size: 2rem; color: var(--primary); margin-left: 10px;"></i>
+            <strong>نحن المتخصصون الأول في شراء السكراب والخردة بجميع أنواعها في مكة المكرمة.</strong> نقدم تقييمًا فوريًا عبر معاينة مجانية، ونحدد أعلى الأسعار حسب السوق اليومي للحديد، النحاس، الألمنيوم، والكابلات. نغطي جميع أحياء مكة (الشرائع، العزيزية، النوارية، الشوقية، الرصيفة، المسفلة، أجياد، وغيرها). تعاملنا شفاف، دفع نقدي فور الاتفاق، ونقل سريع بأحدث المعدات. (كما نوفر خدمة شراء الأثاث المستعمل لكن تركيزنا الأساسي على السكراب)
+        </div>
+    </div>
+</section>
+
+<section id="gallery" style="background: #fefaf7;">
+    <div class="container">
+        <h2 class="section-title">أعمالنا في شراء السكراب</h2>
+        <div class="gallery-grid">
+            <div class="gallery-item fade-up"><img src="img/scrap1.jpg" alt="سكراب حديد ونحاس مكة"></div>
+            <div class="gallery-item fade-up"><img src="img/scrap2.jpg" alt="خردة معادن وألمنيوم"></div>
+            <div class="gallery-item fade-up"><img src="img/scrap3.jpg" alt="شراء كيابل نحاس مكة"></div>
+            <div class="gallery-item fade-up"><img src="img/scrap4.jpg" alt="سكراب سيارات ومعدات"></div>
+            <div class="gallery-item fade-up"><img src="img/scrap5.jpg" alt="حديد تسليح وخردة بناء"></div>
+            <div class="gallery-item fade-up"><img src="img/scrap6.jpg" alt="نحاس أحمر وأصفر بكميات"></div>
+        </div>
+        <p class="fade-up" style="text-align: center; margin-top: 1rem; color: #4b5563;"><i class="fas fa-camera"></i> نماذج حقيقية لعمليات الشراء - اتصل نرسل فريق التقييم</p>
+    </div>
+</section>
+
+<section id="why-us">
+    <div class="container">
+        <h2 class="section-title">لماذا نختارك لبيع السكراب؟</h2>
+        <div class="features-grid">
+            <div class="feature fade-up"><i class="fas fa-chart-line"></i><h4>أعلى سعر بالسوق</h4><p>نحدد الأسعار بناءً على بورصة المعادن اليومية، نضمن لك أفضل عائد.</p></div>
+            <div class="feature fade-up"><i class="fas fa-weight-hanging"></i><h4>دقة في الوزن والتقدير</h4><p>موازين معتمدة، وزن عادل وشفاف بدون أي نقص.</p></div>
+            <div class="feature fade-up"><i class="fas fa-truck-ramp-box"></i><h4>معاينة ونقل فوري</h4><p>فريق متخصص يصل خلال ساعة، نقل سريع لجميع الكميات مهما كانت.</p></div>
+            <div class="feature fade-up"><i class="fas fa-hand-holding-usd"></i><h4>دفع كاش فور الاتفاق</h4><p>تسديد نقدي فوري بعد المعاينة أو الوزن، بدون تأخير.</p></div>
+        </div>
+    </div>
+</section>
+
+<!-- معرض صغير للمقالات والخدمات (مع التركيز على السكراب) -->
+<section id="blog-preview" style="background: #fff;">
+    <div class="container">
+        <h2 class="section-title">أحدث المقالات</h2>
+        <div class="blog-preview">
+            <div class="blog-preview-card fade-up" onclick="location.href='article-1.html'">
+                <img src="img/art/1.jpeg" alt="شراء اثاث مستعمل سكراب معادن المنيوم حديد مكة" class="blog-preview-image">
+                <div class="blog-preview-content">
+                    <h3 class="blog-preview-title">شراء اثاث مستعمل مكة بأفضل الأسعار</h3>
+                    <p class="blog-preview-excerpt">نقدم خدمة شراء اثاث مستعمل مكة بأسعار تنافسية تشمل جميع أنواع الأثاث المنزلي والمكتبي. تقييم عادل ودفع فوري ونقل مجاني...</p>
+                    <span class="read-more">اقرأ المزيد <i class="fas fa-arrow-left"></i></span>
+                </div>
+            </div>
+            <div class="blog-preview-card fade-up" onclick="location.href='article-2.html'">
+                <img src="img/art/2.jpeg" alt="شراء مكيفات مستعملة سكراب معادن scrap مكة" class="blog-preview-image">
+                <div class="blog-preview-content">
+                    <h3 class="blog-preview-title">شراء مكيفات مستعملة مكة بأعلى سعر</h3>
+                    <p class="blog-preview-excerpt">نشتري جميع أنواع المكيفات: سبليت، شباك، مركزي. فك ونقل سريع، دفع فوري، وأعلى الأسعار حسب حالة المكيف والماركة...</p>
+                    <span class="read-more">اقرأ المزيد <i class="fas fa-arrow-left"></i></span>
+                </div>
+            </div>
+            <div class="blog-preview-card fade-up" onclick="location.href='article-3.html'">
+                <img src="img/art/3.jpeg" alt="شراء مطابخ وكنب مستعمل سكراب معادن حديد بلاستيك سلك مكة" class="blog-preview-image">
+                <div class="blog-preview-content">
+                    <h3 class="blog-preview-title">شراء مطابخ وكنب مستعمل مكة</h3>
+                    <p class="blog-preview-excerpt">نشتري جميع أنواع المطابخ (ألمنيوم، خشب، جاهزة) والكنب والمجالس. تقييم دقيق، شراء سريع، ونقل مجاني دون عناء...</p>
+                    <span class="read-more">اقرأ المزيد <i class="fas fa-arrow-left"></i></span>
+                </div>
+            </div>
+        </div>
+        <div class="all-articles-btn">
+            <a href="articles.html" class="btn">جميع المقالات <i class="fas fa-arrow-left"></i></a>
+        </div>
+    </div>
+</section>
+
+<section id="contact">
+    <div class="container">
+        <h2 class="section-title">اتصل بنا لبيع السكراب بأعلى سعر</h2>
+        <div class="contact-wrapper">
+            <div class="contact-info">
+                <div class="contact-item"><i class="fas fa-phone-alt"></i><div><strong>جوال / واتساب</strong><br><a href="tel:+966562033882">0562033882</a></div></div>
+                <div class="contact-item"><i class="fab fa-whatsapp"></i><div><strong>واتساب للتواصل السريع</strong><br><a href="https://wa.me/966562033882" target="_blank">إضغط هنا لمراسلتنا (سكراب)</a></div></div>
+                <div class="contact-item"><i class="fas fa-map-pin"></i><div><strong>تغطية شاملة</strong><br>جميع أحياء مكة: العزيزية، الشرائع، الشوقية، النوارية، المسفلة، الرصيفة، الكعكية، الحجون، أجياد.</div></div>
+                <div class="contact-item"><i class="fas fa-clock"></i><div><strong>خدمة 24 ساعة</strong><br>المعاينة من السبت إلى الخميس 8ص - 11م ، والجمعة حسب الاتفاق.</div></div>
+            </div>
+            <div class="contact-form">
+                <h3 style="margin-bottom: 20px;">أرسل بيانات السكراب لديك</h3>
+                <form id="contactForm">
+                    <div class="form-group"><input type="text" placeholder="الاسم / الشركة" id="name" required></div>
+                    <div class="form-group"><input type="tel" placeholder="رقم الجوال (واتساب)" id="mobile" required></div>
+                    <div class="form-group"><textarea rows="3" placeholder="نوع السكراب: حديد / نحاس / ألمنيوم / كيابل / سيارات خردة + الكمية التقريبية أو الموقع" id="message" required></textarea></div>
+                    <button type="submit" class="btn btn-submit">إرسال وسيتم الرد فوراً</button>
+                </form>
+                <p style="margin-top: 16px; font-size: 0.85rem;"><i class="fas fa-check-circle" style="color: var(--primary);"></i> فريقنا سيتواصل خلال 5 دقائق لتقييم السعر والمعاينة</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="container">
+        <p>© 2026 - الرائد لشراء السكراب والحديد والخردة بمكة | شراء جميع أنواع السكراب: حديد، نحاس، ألمنيوم، كيابل، سكراب سيارات | هاتف 0562033882 | نشتري الأثاث المستعمل أيضاً</p>
+    </div>
+</footer>
+
+<div class="float-buttons">
+    <a href="tel:+966562033882" class="float-btn call" title="اتصل فوري لبيع السكراب"><i class="fas fa-phone-alt"></i></a>
+    <a href="https://wa.me/966562033882?text=السلام عليكم، عندي سكراب (حديد، نحاس، ألمنيوم أو خردة) أريد بيعها بأفضل سعر في مكة" target="_blank" class="float-btn whatsapp" title="أرسل صور السكراب للحصول على سعر"><i class="fab fa-whatsapp"></i></a>
+</div>
+
+<script>
+    // fade up
+    const fadeElements = document.querySelectorAll('.fade-up');
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if(entry.isIntersecting){
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.1 });
+    fadeElements.forEach(el => observer.observe(el));
+    window.addEventListener('load', () => {
+        fadeElements.forEach(el => {
+            if(el.getBoundingClientRect().top < window.innerHeight - 100) el.classList.add('visible');
+        });
+    });
+    
+    // contact form -> whatsapp
+    const form = document.getElementById('contactForm');
+    if(form) {
+        form.addEventListener('submit', (e) => {
+          e.preventDefault();
+          const name = document.getElementById('name').value;
+          const mobile = document.getElementById('mobile').value;
+          const message = document.getElementById('message').value;
+          const whatsappUrl = `https://wa.me/966562033882?text=طلب بيع سكراب من الموقع:%0Aالاسم: ${name}%0Aالجوال: ${mobile}%0Aتفاصيل السكراب: ${message}`;
+          window.open(whatsappUrl, '_blank');
+        });
+    }
+    
+    // menu mobile
+    const menuToggle = document.getElementById('menuToggle');
+    const navLinks = document.getElementById('navLinks');
+    const closeMenu = document.getElementById('closeMenu');
+    if(menuToggle) menuToggle.addEventListener('click', () => navLinks.classList.add('active'));
+    if(closeMenu) closeMenu.addEventListener('click', () => navLinks.classList.remove('active'));
+    document.querySelectorAll('.nav-links a').forEach(link => link.addEventListener('click', () => navLinks.classList.remove('active')));
+    
+    // ticker close
+    const ticker = document.getElementById('newsTicker');
+    const closeTickerBtn = document.getElementById('closeTickerBtn');
+    if(closeTickerBtn) closeTickerBtn.addEventListener('click', () => {
+        ticker.classList.add('hidden');
+        document.body.classList.remove('has-ticker');
+    });
+    ticker.classList.remove('hidden');
+    document.body.classList.add('has-ticker');
+    
+    // إضافة كلمات مفتاحية ديناميكية لأي بحث محلي (SEO على الصفحة نفسها)
+    // نص مخفي للمساعدة في محركات البحث يظهر لمحركات فقط
+    let seoHelper = document.createElement('div');
+    seoHelper.style.display = 'none';
+    seoHelper.innerHTML = '<div>شراء السكراب مكة، شراء خردة مكة، شراء حديد مستعمل مكة، شراء نحاس أحمر مكة، سكراب سيارات، شراء ألمنيوم مكة، كيابل نحاس، سكراب معدات ثقيلة، أفضل شركة سكراب مكة، نشترى السكراب بكل أنواعه</div>';
+    document.body.appendChild(seoHelper);
+</script>
+</body>
+  </html>
